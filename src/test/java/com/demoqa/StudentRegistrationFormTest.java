@@ -23,21 +23,21 @@ public class StudentRegistrationFormTest {
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
-        $("#userForm #firstName").setValue("Sergey");
-        $("#userForm #lastName").setValue("Sviridov");
-        $("#userForm #userEmail").setValue("super@test.com");
+        $("#firstName").setValue("Sergey");
+        $("#lastName").setValue("Sviridov");
+        $("#userEmail").setValue("super@test.com");
         $("[for = gender-radio-1]").click();
-        $("#userForm #userNumber").setValue("9171234567");
-        $("#userForm #dateOfBirthInput").click();
+        $("#userNumber").setValue("9171234567");
+        $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOption("October");
         $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOptionByValue("1993");
         $(".react-datepicker__day--008").click();
-        $("#userForm #subjectsInput").setValue("Computer Science").pressEnter();
+        $("#subjectsInput").setValue("Computer Science").pressEnter();
         $("[for = hobbies-checkbox-1]").click();
-        $("#userForm #uploadPicture").uploadFile(new File("src/test/resources/face.png"));
-        $("#userForm #currentAddress").setValue("960 AVENUE OF THE AMERICAS NEW YORK");
+        $("#uploadPicture").uploadFile(new File("src/test/resources/face.png"));
+        $("#currentAddress").setValue("960 AVENUE OF THE AMERICAS NEW YORK");
         $("#state").click();
         $(byText("Haryana")).click();
         $("#city").click();
