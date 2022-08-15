@@ -24,7 +24,7 @@ public class StudentRegistrationFormTest {
         $("#firstName").setValue("Sergey");
         $("#lastName").setValue("Sviridov");
         $("#userEmail").setValue("super@test.com");
-        $(byText("Male")).click();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("9171234567");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").click();
@@ -33,7 +33,7 @@ public class StudentRegistrationFormTest {
         $(".react-datepicker__year-select").selectOptionByValue("1993");
         $(".react-datepicker__day--008").click();
         $("#subjectsInput").setValue("Computer Science").pressEnter();
-        $(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("face.png");
         $("#currentAddress").setValue("960 AVENUE OF THE AMERICAS NEW YORK");
         $("#state").click();
